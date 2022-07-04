@@ -1,0 +1,4 @@
+venv/
+plotdat.py
+.idea
+__pycache__
