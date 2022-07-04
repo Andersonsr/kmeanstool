@@ -12,7 +12,7 @@ if __name__ == '__main__':
     parser.add_argument('-f', type=str, dest='filename', help='input filename', default='datasets/data.dat')
     parser.add_argument('-i', type=int, dest='maxIterations', help='max iterations', default='1000')
     parser.add_argument('-o', type=str, dest='outputFile', help='output filename', default='output.gif')
-    parser.add_argument('-d', type=bool, dest='delete', help='delete frames after generating gif', default=True)
+    parser.add_argument('-s', type=int, dest='fps', help='frames per second', default=1)
     args = parser.parse_args()
 
     data = fileReader.readData(args.filename)
@@ -25,6 +25,6 @@ if __name__ == '__main__':
     for i in range(len(labels)):
         frames.append(imageio.imread('frame'+str(i)+'.png'))
 
-    imageio.mimsave(args.outputFile, frames, format='GIF', fps=1)
+    imageio.mimsave(args.outputFile, frames, format='GIF', fps=args.fps)
     for i in range(len(labels)):
         os.remove('frame'+str(i)+'.png')

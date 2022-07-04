@@ -2,3 +2,5 @@ venv/
 plotdat.py
 .idea
 __pycache__
+datasets/data3.dat
+datasets/data4.dat
