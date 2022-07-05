@@ -1,6 +1,5 @@
 import argparse
 import os
-
 import imageio
 import fileReader
 import kmeans

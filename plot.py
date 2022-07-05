@@ -20,5 +20,11 @@ def plotKmeans(data, labels, centroids, outputfile):
         plt.savefig(outputfile)
     plt.close()
 
-def plotElbow():
-    print('hi')
+def plotElbow(k, variance):
+    plt.plot(k, variance)
+
+    plt.title("Elbow")
+    plt.xlabel("k")
+    plt.ylabel("variance")
+    plt.show()
+
